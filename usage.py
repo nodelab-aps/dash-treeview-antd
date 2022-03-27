@@ -13,6 +13,7 @@ app.layout = html.Div([
         id='input',
         multiple=True,
         checkable=True,
+        checkStrictly=True,
         checked=['0-0-1'],
         selected=[],
         expanded=['0'],

@@ -24,13 +24,15 @@ export default class TreeView extends Component {
 
     render() {
         const {
-          id, checkable, multiple, checked, expanded,
+          id, checkable, checkStrictly, multiple, checked, expanded,
           selected, setProps, data} = this.props;
 
         return (
             <div id={id}>
                 <Tree
-                  checkable={checkable} multiple={multiple}
+                  checkable={checkable} 
+                  checkStrictly={checkStrictly}
+                  multiple={multiple}
                   defaultExpandedKeys={expanded}
                   defaultSelectedKeys={selected}
                   defaultCheckedKeys={checked}
@@ -83,6 +85,12 @@ TreeView.propTypes = {
      */
 
     checkable: PropTypes.bool,
+
+    /**
+     * Check treeNode precisely; parent treeNode and children treeNodes are not associated
+     */
+    checkStrictly: PropTypes.bool,
+
     /**
      * Allows selecting multiple treeNodes (Default - false)
      */
@@ -131,6 +139,7 @@ TreeView.defaultProps = {
     }]
   },
   checkable: false,
+  checkStrictly: false,
   multiple: true,
   checked: [],
   selected: [],

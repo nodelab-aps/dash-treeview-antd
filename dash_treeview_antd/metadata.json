@@ -35,6 +35,17 @@
           "computed": false
         }
       },
+      "checkStrictly": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Check treeNode precisely; parent treeNode and children treeNodes are not associated",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
       "multiple": {
         "type": {
           "name": "bool"
